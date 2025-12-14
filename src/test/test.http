@@ -1,0 +1,35 @@
+### 抖音主播搜索
+GET {{host}}/anchor/search/{{anchor_name}}
+
+### 抖音主播历史直播记录
+GET {{host}}/anchor/history/{{anchor_rid}}
+
+### 抖音主播详情
+GET {{host}}/anchor/profile/{{sec_user_id}}?type={{type}}
+
+##########################################################################################
+
+###  抖音热搜榜单
+GET {{host}}/rank/hot?type={{type}}
+
+### mobile 人气榜单
+GET {{host}}/rank/list?type={{type}}
+
+### 抖音创作者人气榜单
+GET {{host}}/rank/creator?type={{type}}
+
+### 抖音web直播间人气榜单
+GET {{host}}/rank/webranklist?type={{type}}
+
+### 抖音游戏直播列表
+GET {{host}}/rank/gamelist?count=15&offset=0&partition=1010053&partition_type=1&type={{type}}
+
+##########################################################################################
+
+### 抖音web直播间详情
+GET {{host}}/live/room/{{web_rid}}?type={{type}}
+
+### 抖音mobile直播间详情
+GET {{host}}/live/detail/{{room_id}}?type={{type}}
+
+
