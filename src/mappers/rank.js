@@ -115,6 +115,7 @@ exports.gameListMapper = (raw) => {
       aid: item?.room?.owner_user_id || null, // 抖音主播AID
       game_tag: item?.room?.game_data?.game_tag_info || null, // 游戏标签
       sec_user_id: item?.room?.owner?.sec_uid || null, // 抖音主播安全ID
+      nickname: item?.room?.owner?.nickname || null, // 主播昵称
     }));
     return {
       data: mappedData,

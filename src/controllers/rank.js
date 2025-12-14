@@ -76,7 +76,6 @@ exports.gamelist = async (req, res) => {
     if (!count || !offset || !partition || !partition_type) {
       return res.json({ code: 40001, msg: "参数错误" });
     }
-
     const data = await rank.getGameList(count, offset, partition, partition_type, type);
     res.json(data);
   } catch (error) {

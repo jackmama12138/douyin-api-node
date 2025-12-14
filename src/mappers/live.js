@@ -86,6 +86,7 @@ exports.mobileLiveRoomMapper = (raw) => {
         live_total_user: room?.stats?.total_user || 0, // 场观人次
         live_follow_count: room?.stats?.follow_count || 0, // 本场直播关注数
         live_stream_url_map: room?.stream_url?.hls_pull_url_map || null, // 直播流地址对象
+        live_user_count: room?.user_count || 0, // 直播观众数
       },
       anchor: {
         anchor_short_id: anchor?.short_id || null, // 主播短ID
