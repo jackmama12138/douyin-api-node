@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
+
 app.use(express.json());
+app.use(cors());
 
 // 统一前缀，例如 /api 或 /api/v1
 const apiRouter = require('./routers');

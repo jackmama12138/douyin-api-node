@@ -125,3 +125,15 @@ exports.mobileLiveRoomMapper = (raw) => {
     };
   }
 };
+
+exports.wssUrlMapper = (raw) => {
+  try {
+    if (!raw || !raw.data) {
+      return null;
+    }
+    return raw.data.enter_room_id;
+  } catch (error) {
+    console.error('WSS URL 映射失败:', error);
+    return null;
+  }
+};

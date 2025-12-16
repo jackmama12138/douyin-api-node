@@ -38,7 +38,7 @@ exports.mobileRankListMapper = (raw) => {
       user_count: item?.room?.user_count || 0, // 用户数量
       display_id: item?.user?.display_id || null, // 抖音ID
       sec_uid: item?.user?.sec_uid || null, // 抖音安全ID
-      room_id_str: item?.user?.id_str || null, // 抖音直播房间ID
+      room_id_str: item?.room?.id_str || null, // 抖音直播房间ID
     }));
   } catch (error) {
     console.error('移动端排行榜数据映射失败:', error);

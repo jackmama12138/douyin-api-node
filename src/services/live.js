@@ -1,5 +1,6 @@
 const live = require('../api/live');
 const LiveMapper = require('../mappers/live');
+const {get_wss_url} = require('../utils/sign_v2');
 
 /**
  * 获取网页端直播房间信息
@@ -18,6 +19,12 @@ exports.webLiveRoomValue = async (web_rid, type) => {
     if (type === 'mapper') {
       return LiveMapper.webLiveRoomMapper(data);
     }
+
+    if (type === 'wss') {
+      const room_id =  LiveMapper.wssUrlMapper(data);
+      return {url:get_wss_url(room_id)};
+    }
+
     return data;
   } catch (error) {
     console.error('获取网页端直播房间信息失败:', error);
